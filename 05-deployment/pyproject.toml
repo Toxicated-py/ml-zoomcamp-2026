@@ -1,0 +1,26 @@
+[project]
+name = "05-deployment"
+version = "0.1.0"
+description = "Churn Prediction Model"
+readme = "README.md"
+authors = [
+    { name = "Toxicated-py", email = "ashishadhikari292@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.162.0",
+    "scikit-learn>=1.9.1",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+05-deployment = "05_deployment:main"
+
+[build-system]
+requires = ["uv_build>=0.12.16,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "requests>=2.34.2",
+]
